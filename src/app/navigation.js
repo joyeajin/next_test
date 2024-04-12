@@ -3,20 +3,33 @@
 import Link from "next/link";
 import "./navigation.css";
 import { usePathname } from "next/navigation";
-// import { useRouter } from "next/navigation";
 
 export default function Navigation() {
-  // const router = useRouter();
   const pathname = usePathname();
   console.log(pathname);
-  const isAbout = pathname === "/about";
-  const isProduct = pathname === "/product";
-  const isSupport = pathname === "/support";
+  // const isAbout = pathname === "/about";
+  // const isProduct = pathname === "/product";
+  // const isSupport = pathname === "/support";
+  const navList = [
+    { path: "/about", label: "회사소개" },
+    { path: "/product", label: "제품소개" },
+    { path: "/support", label: "지원" },
+  ];
   return (
     <>
       <nav>
         <ul>
-          <li>
+          {navList.map((item) => (
+            <li key={item.path}>
+              <Link
+                href={item.path}
+                className={pathname === item.path ? "active" : ""}
+              >
+                {item.label}
+              </Link>
+            </li>
+          ))}
+          {/* <li>
             <Link href="/about" className={isAbout ? "active" : ""}>
               회사소개
             </Link>
@@ -30,7 +43,7 @@ export default function Navigation() {
             <Link href="/support" className={isSupport ? "active" : ""}>
               지원
             </Link>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </>
