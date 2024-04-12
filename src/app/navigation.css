@@ -1,0 +1,11 @@
+nav ul{
+    display: flex;
+}
+
+nav ul li a {
+    margin-right: 40px;
+}
+
+nav ul li a.active{
+    color: blue;
+}
