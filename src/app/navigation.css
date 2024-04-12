@@ -9,3 +9,9 @@ nav ul li a {
 nav ul li a.active{
     color: blue;
 }
+
+nav{
+    padding: 20px;
+    background-color: beige;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,40 @@
+.jumbotron, .cardDeck{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.jumbotron{
+    background-color: bisque;
+}
+
+.cardDeck{
+    background-color: burlywood;
+    margin-top: 20px;
+}
+
+.cardDeck .cards{
+    display: flex;
+    width: 100%;
+    /* column-gap: 20px; */
+    justify-content: space-evenly;
+}
+
+.cardDeck .cards .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid brown;
+    padding: 10px;
+}
+
+h3{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+h1{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
